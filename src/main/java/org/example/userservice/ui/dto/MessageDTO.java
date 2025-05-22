@@ -27,6 +27,8 @@ public class MessageDTO {
     @NotNull
     private Long chatId;
 
+    private String audioData;
+
     private LocalDateTime createdAt;
 
     private LocalDateTime modifiedAt;
