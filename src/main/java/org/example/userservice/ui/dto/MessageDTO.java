@@ -29,6 +29,8 @@ public class MessageDTO {
 
     private String audioData;
 
+    private boolean audioMessage;
+
     private LocalDateTime createdAt;
 
     private LocalDateTime modifiedAt;
