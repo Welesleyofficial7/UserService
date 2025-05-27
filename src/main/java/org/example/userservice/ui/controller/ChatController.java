@@ -1,5 +1,6 @@
 package org.example.userservice.ui.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.example.userservice.application.adapter.in.service.ChatServiceAdapter;
 import org.example.userservice.ui.dto.ChatDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
+@Slf4j
 @RestController
 @RequestMapping("/api/chats")
 public class ChatController {
@@ -21,7 +24,9 @@ public class ChatController {
 
     @PostMapping
     public ResponseEntity<ChatDTO> createChat(@RequestBody ChatDTO chatDto) {
+        log.info(chatDto.getUserId().toString() + "AB");
         ChatDTO createdChat = chatService.createChat(chatDto);
+        log.info(createdChat + "AB");
         return ResponseEntity.ok(createdChat);
     }
 

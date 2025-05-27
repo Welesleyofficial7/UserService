@@ -28,4 +28,5 @@ public class UserDTO {
     private LocalDateTime modifiedAt;
 
     private List<Long> chatIds;
+
 }
